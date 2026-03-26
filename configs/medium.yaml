@@ -1,0 +1,26 @@
+# Medium config — trains on a GPU in ~1 hour
+# Run with: python 06_training/train.py --config configs/medium.yaml
+
+vocab_size: 8000
+d_model: 256
+num_heads: 8
+num_layers: 6
+d_ff: 1024
+max_seq_len: 512
+dropout: 0.1
+activation: gelu
+bias: false
+
+batch_size: 64
+learning_rate: 2.5e-4
+weight_decay: 0.1
+grad_clip: 1.0
+warmup_steps: 400
+max_steps: 20000
+val_interval: 500
+log_interval: 100
+grad_accumulation_steps: 2
+
+tokenizer_path: 02_tokenization/tokenizer.json
+corpus_path: 01_data/processed/corpus.txt
+experiment_dir: experiments/medium
