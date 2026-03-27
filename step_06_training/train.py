@@ -16,9 +16,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from 02_tokenization.bpe_tokenizer import BPETokenizer
-from 01_data.data_loader import RunningDataset, build_dataloaders
-from 05_transformer.gpt_model import RunningGPT
+from step_02_tokenization.bpe_tokenizer import BPETokenizer
+from step_01_data.data_loader import RunningDataset, build_dataloaders
+from step_05_transformer.gpt_model import RunningGPT
 from trainer import Trainer
 
 # ── Default small config (runs on any laptop) ──────────────────────────────

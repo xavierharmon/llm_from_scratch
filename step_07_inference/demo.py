@@ -18,8 +18,8 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from 02_tokenization.bpe_tokenizer import BPETokenizer
-from 05_transformer.gpt_model import RunningGPT
+from step_02_tokenization.bpe_tokenizer import BPETokenizer
+from step_05_transformer.gpt_model import RunningGPT
 from generate import generate, greedy_generate
 
 

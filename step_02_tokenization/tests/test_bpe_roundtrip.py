@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import pytest
-from 02_tokenization.bpe_tokenizer import BPETokenizer
+from step_02_tokenization.bpe_tokenizer import BPETokenizer
 
 SMALL_CORPUS = [
     "easy run 5 miles at 9:30 pace felt good",

@@ -35,11 +35,11 @@ import torch.nn.functional as F
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from lora import apply_lora
-from 02_tokenization.bpe_tokenizer import BPETokenizer
-from 01_data.data_loader import RunningDataset, build_dataloaders
-from 05_transformer.gpt_model import RunningGPT
-from 06_training.loss import cross_entropy_loss
-from 06_training.optimizer import CosineWarmupScheduler
+from step_02_tokenization.bpe_tokenizer import BPETokenizer
+from step_01_data.data_loader import RunningDataset, build_dataloaders
+from step_05_transformer.gpt_model import RunningGPT
+from step_06_training.loss import cross_entropy_loss
+from step_06_training.optimizer import CosineWarmupScheduler
 
 
 class LoRAFineTuner:

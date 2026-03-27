@@ -13,8 +13,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import pytest
 import torch
-from 04_attention.scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
-from 04_attention.multi_head_attention import MultiHeadAttention
+from step_04_attention.scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
+from step_04_attention.multi_head_attention import MultiHeadAttention
 
 
 class TestScaledDotProductAttention:

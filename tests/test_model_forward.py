@@ -13,10 +13,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import pytest
 import torch
-from 05_transformer.gpt_model import RunningGPT
-from 05_transformer.layer_norm import LayerNorm
-from 05_transformer.feed_forward import FeedForward
-from 05_transformer.transformer_block import TransformerBlock
+from step_05_transformer.gpt_model import RunningGPT
+from step_05_transformer.layer_norm import LayerNorm
+from step_05_transformer.feed_forward import FeedForward
+from step_05_transformer.transformer_block import TransformerBlock
 
 
 # Small config for fast tests
