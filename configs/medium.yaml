@@ -21,6 +21,6 @@ val_interval: 500
 log_interval: 100
 grad_accumulation_steps: 2
 
-tokenizer_path: 02_tokenization/tokenizer.json
-corpus_path: 01_data/processed/corpus.txt
+tokenizer_path: step_02_tokenization/tokenizer.json
+corpus_path: step_01_data/processed/corpus.txt
 experiment_dir: experiments/medium

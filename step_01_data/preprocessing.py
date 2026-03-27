@@ -27,7 +27,7 @@ class RunPreprocessor:
     a text corpus for language model training.
     """
 
-    def __init__(self, raw_dir: Path = Path("01_data/raw"),
+    def __init__(self, raw_dir: Path = Path("step_01_data/raw"),
                  output_dir: Path = Path("01_data/processed")):
         self.raw_dir = Path(raw_dir)
         self.output_dir = Path(output_dir)

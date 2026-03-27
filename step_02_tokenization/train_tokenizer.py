@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from bpe_tokenizer import BPETokenizer
+from step_02_tokenization.bpe_tokenizer import BPETokenizer
 
 
 def train(corpus_path: Path, vocab_size: int, output_path: Path) -> BPETokenizer:
@@ -37,14 +37,14 @@ def train(corpus_path: Path, vocab_size: int, output_path: Path) -> BPETokenizer
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--corpus", type=Path, default=Path("01_data/processed/corpus.txt"))
+    parser.add_argument("--corpus", type=Path, default=Path("step_01_data/processed/corpus.txt"))
     parser.add_argument("--vocab-size", type=int, default=8000)
-    parser.add_argument("--output", type=Path, default=Path("02_tokenization/tokenizer.json"))
+    parser.add_argument("--output", type=Path, default=Path("step_02_tokenization/tokenizer.json"))
     args = parser.parse_args()
 
     if not args.corpus.exists():
         print(f"Corpus not found at {args.corpus}.")
-        print("Run: python 01_data/download_data.py && python 01_data/preprocessing.py")
+        print("Run: python step_01_data/download_data.py && python step_01_data/preprocessing.py")
         sys.exit(1)
 
     train(args.corpus, args.vocab_size, args.output)

@@ -1,5 +1,5 @@
 # Debug config — trains in seconds, good for testing code changes
-# Run with: python 06_training/train.py --config configs/debug.yaml
+# Run with: python step_06_training/train.py --config configs/debug.yaml
 
 vocab_size: 512
 d_model: 32
@@ -21,6 +21,6 @@ val_interval: 50
 log_interval: 10
 grad_accumulation_steps: 1
 
-tokenizer_path: 02_tokenization/tokenizer.json
-corpus_path: 01_data/processed/corpus.txt
+tokenizer_path: step_02_tokenization/tokenizer.json
+corpus_path: step_01_data/processed/corpus.txt
 experiment_dir: experiments/debug

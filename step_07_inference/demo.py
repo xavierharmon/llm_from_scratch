@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from step_02_tokenization.bpe_tokenizer import BPETokenizer
 from step_05_transformer.gpt_model import RunningGPT
-from generate import generate, greedy_generate
+from step_07_inference.generate import generate, greedy_generate
 
 
 def load_model(checkpoint_path: Path, device: torch.device) -> tuple:

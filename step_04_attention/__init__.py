@@ -10,7 +10,7 @@ Key functions/classes:
     MultiHeadAttention           — h parallel attention heads
 """
 
-from .scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
-from .multi_head_attention import MultiHeadAttention
+from step_04_attention.scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
+from step_04_attention.multi_head_attention import MultiHeadAttention
 
 __all__ = ["scaled_dot_product_attention", "generate_causal_mask", "MultiHeadAttention"]

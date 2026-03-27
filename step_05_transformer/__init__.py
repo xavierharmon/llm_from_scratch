@@ -10,9 +10,9 @@ Key classes:
     RunningGPT       — complete stacked model with embedding + LM head
 """
 
-from .layer_norm import LayerNorm
-from .feed_forward import FeedForward
-from .transformer_block import TransformerBlock
-from .gpt_model import RunningGPT
+from step_05_transformer.layer_norm import LayerNorm
+from step_05_transformer.feed_forward import FeedForward
+from step_05_transformer.transformer_block import TransformerBlock
+from step_05_transformer.gpt_model import RunningGPT
 
 __all__ = ["LayerNorm", "FeedForward", "TransformerBlock", "RunningGPT"]

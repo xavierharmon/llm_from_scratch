@@ -50,8 +50,8 @@ import torch
 import torch.nn as nn
 from typing import Optional
 
-from .layer_norm import LayerNorm
-from .feed_forward import FeedForward
+from step_05_transformer.layer_norm import LayerNorm
+from step_05_transformer.feed_forward import FeedForward
 
 import sys
 from pathlib import Path

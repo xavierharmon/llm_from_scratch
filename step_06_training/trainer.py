@@ -26,8 +26,8 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from .loss import cross_entropy_loss, perplexity
-from .optimizer import build_optimizer, CosineWarmupScheduler
+from step_06_training.loss import cross_entropy_loss, perplexity
+from step_06_training.optimizer import build_optimizer, CosineWarmupScheduler
 
 
 class Trainer:

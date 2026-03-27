@@ -39,7 +39,7 @@ def download_synthetic(n: int = 10_000, output_dir: Path = Path("01_data/raw")) 
     splits_df.to_csv(output_dir / "splits.csv", index=False)
     print(f"  Saved splits.csv ({len(splits_df):,} rows)")
 
-    print("\nDone. Run 'python 01_data/preprocessing.py' next.")
+    print("\nDone. Run 'python step_01_data/preprocessing.py' next.")
 
 
 def download_kaggle(output_dir: Path = Path("01_data/raw")) -> None:

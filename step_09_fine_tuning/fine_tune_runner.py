@@ -34,7 +34,7 @@ import torch.nn.functional as F
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from lora import apply_lora
+from step_09_fine_tuning.lora import apply_lora
 from step_02_tokenization.bpe_tokenizer import BPETokenizer
 from step_01_data.data_loader import RunningDataset, build_dataloaders
 from step_05_transformer.gpt_model import RunningGPT
@@ -202,7 +202,7 @@ if __name__ == "__main__":
             train_text = [line.strip() for line in f if line.strip()]
         print(f"Loaded {len(train_text):,} fine-tuning documents from {args.data}")
     else:
-        from 01_data.generate_synthetic import SyntheticRunGenerator
+        from step_01_data.generate_synthetic import SyntheticRunGenerator
         print("No data file provided — using synthetic trail running data")
         gen = SyntheticRunGenerator(seed=777)
         train_text = gen.generate_run_notes(500)

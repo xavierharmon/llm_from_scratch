@@ -14,9 +14,9 @@ Key functions:
     perplexity             — human-readable loss metric
 """
 
-from .trainer import Trainer
-from .optimizer import build_optimizer, CosineWarmupScheduler
-from .loss import cross_entropy_loss, perplexity
+from step_06_training.trainer import Trainer
+from step_06_training.optimizer import build_optimizer, CosineWarmupScheduler
+from step_06_training.loss import cross_entropy_loss, perplexity
 
 __all__ = ["Trainer", "build_optimizer", "CosineWarmupScheduler",
            "cross_entropy_loss", "perplexity"]

@@ -4,9 +4,9 @@ Training Entry Point
 Wire everything together and launch a training run.
 
 Usage:
-    python 06_training/train.py
-    python 06_training/train.py --config configs/small.yaml
-    python 06_training/train.py --resume experiments/baseline/latest.pt
+    python step_06_training/train.py
+    python step_06_training/train.py --config configs/small.yaml
+    python step_06_training/train.py --resume experiments/baseline/latest.pt
 """
 
 import argparse
@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from step_02_tokenization.bpe_tokenizer import BPETokenizer
 from step_01_data.data_loader import RunningDataset, build_dataloaders
 from step_05_transformer.gpt_model import RunningGPT
-from trainer import Trainer
+from step_06_training.trainer import Trainer
 
 # ── Default small config (runs on any laptop) ──────────────────────────────
 DEFAULT_CONFIG = {
@@ -43,8 +43,8 @@ DEFAULT_CONFIG = {
     "log_interval":            50,
     "grad_accumulation_steps": 1,
 
-    "tokenizer_path":          "02_tokenization/tokenizer.json",
-    "corpus_path":             "01_data/processed/corpus.txt",
+    "tokenizer_path":          "step_02_tokenization/tokenizer.json",
+    "corpus_path":             "step_01_data/processed/corpus.txt",
     "experiment_dir":          "experiments/baseline",
 }
 
@@ -64,7 +64,7 @@ def main(args: argparse.Namespace) -> None:
     tok_path = Path(config["tokenizer_path"])
     if not tok_path.exists():
         print(f"Tokenizer not found at {tok_path}.")
-        print("Run: python 02_tokenization/train_tokenizer.py")
+        print("Run: python step_02_tokenization/train_tokenizer.py")
         sys.exit(1)
     tokenizer = BPETokenizer.load(tok_path)
     config["vocab_size"] = len(tokenizer)
@@ -74,7 +74,7 @@ def main(args: argparse.Namespace) -> None:
     corpus_path = Path(config["corpus_path"])
     if not corpus_path.exists():
         print(f"Corpus not found at {corpus_path}.")
-        print("Run: python 01_data/download_data.py && python 01_data/preprocessing.py")
+        print("Run: python step_01_data/download_data.py && python step_01_data/preprocessing.py")
         sys.exit(1)
 
     dataset = RunningDataset.from_corpus_file(

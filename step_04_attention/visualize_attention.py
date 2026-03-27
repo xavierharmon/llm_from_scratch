@@ -72,15 +72,15 @@ def plot_attention_heatmap(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--checkpoint", type=Path, required=True)
-    parser.add_argument("--tokenizer", type=Path, default=Path("02_tokenization/tokenizer.json"))
+    parser.add_argument("--tokenizer", type=Path, default=Path("step_02_tokenization/tokenizer.json"))
     parser.add_argument("--prompt", type=str,
                         default="My marathon pace was 8:30 per mile and I felt strong")
     parser.add_argument("--layer", type=int, default=0)
     parser.add_argument("--output", type=Path, default=Path("docs/attention_heatmap.png"))
     args = parser.parse_args()
 
-    from 02_tokenization.bpe_tokenizer import BPETokenizer
-    from 05_transformer.gpt_model import RunningGPT
+    from step_02_tokenization.bpe_tokenizer import BPETokenizer
+    from step_05_transformer.gpt_model import RunningGPT
 
     tokenizer = BPETokenizer.load(args.tokenizer)
     checkpoint = torch.load(args.checkpoint, map_location="cpu")

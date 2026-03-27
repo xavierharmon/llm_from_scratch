@@ -29,7 +29,7 @@ import torch
 import torch.nn as nn
 import math
 from typing import Optional
-from .scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
+from step_04_attention.scaled_dot_product import scaled_dot_product_attention, generate_causal_mask
 
 
 class MultiHeadAttention(nn.Module):

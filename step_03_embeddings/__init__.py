@@ -9,7 +9,7 @@ Key classes:
     LearnedPositionalEmbedding   — trainable position encoding (GPT-2 style)
 """
 
-from .token_embedding import TokenEmbedding
-from .positional_encoding import SinusoidalPositionalEncoding, LearnedPositionalEmbedding
+from step_03_embeddings.token_embedding import TokenEmbedding
+from step_03_embeddings.positional_encoding import SinusoidalPositionalEncoding, LearnedPositionalEmbedding
 
 __all__ = ["TokenEmbedding", "SinusoidalPositionalEncoding", "LearnedPositionalEmbedding"]

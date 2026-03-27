@@ -23,7 +23,7 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from perplexity import compute_perplexity, compute_token_accuracy
+from step_08_evaluation.perplexity import compute_perplexity, compute_token_accuracy
 
 
 def measure_throughput(
@@ -72,10 +72,10 @@ def count_parameters(model: torch.nn.Module) -> dict:
 
 
 def run_benchmark(checkpoint_path: Path) -> dict:
-    from 02_tokenization.bpe_tokenizer import BPETokenizer
-    from 01_data.generate_synthetic import SyntheticRunGenerator
-    from 01_data.data_loader import RunningDataset, build_dataloaders
-    from 05_transformer.gpt_model import RunningGPT
+    from step_02_tokenization.bpe_tokenizer import BPETokenizer
+    from step_01_data.generate_synthetic import SyntheticRunGenerator
+    from step_01_data.data_loader import RunningDataset, build_dataloaders
+    from step_05_transformer.gpt_model import RunningGPT
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

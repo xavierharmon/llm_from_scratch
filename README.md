@@ -90,3 +90,8 @@ max_steps: 5000
 ## License
 
 MIT
+
+## Notes
+| Step | What | Notes & Learnings |
+|-------|--------|----------------|
+| 01_data | `Setup` | `Running wiht an old anaconda install caused issues. Deleted and uninstalled anaconda and setup a python instance. Running on venv also helped overcome package issues. Numpy 2.0 caused some headache as well.` |

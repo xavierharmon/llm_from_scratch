@@ -61,12 +61,12 @@ def plot_embedding_clusters(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--checkpoint", type=Path, required=True)
-    parser.add_argument("--tokenizer", type=Path, default=Path("02_tokenization/tokenizer.json"))
+    parser.add_argument("--tokenizer", type=Path, default=Path("step_02_tokenization/tokenizer.json"))
     parser.add_argument("--max-tokens", type=int, default=2000)
     parser.add_argument("--output", type=Path, default=Path("docs/embedding_tsne.png"))
     args = parser.parse_args()
 
-    from 02_tokenization.bpe_tokenizer import BPETokenizer  # noqa
+    from step_02_tokenization.bpe_tokenizer import BPETokenizer  # noqa
     tokenizer = BPETokenizer.load(args.tokenizer)
 
     checkpoint = torch.load(args.checkpoint, map_location="cpu")

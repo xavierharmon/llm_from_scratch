@@ -9,6 +9,6 @@ Key functions:
     beam_search     — beam search decoder (beam_search.py)
 """
 
-from .generate import generate, greedy_generate
+from step_07_inference.generate import generate, greedy_generate
 
 __all__ = ["generate", "greedy_generate"]
