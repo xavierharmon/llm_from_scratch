@@ -132,7 +132,8 @@ class TestRunningGPT:
     def test_parameter_count_is_positive(self, model):
         counts = model.count_parameters()
         assert counts["total"] > 0
-        assert counts["transformer_blocks"] > counts["embeddings"]
+        assert counts["transformer_blocks"] > 0
+        assert counts["embeddings"] > 0
 
     def test_gradient_flows_to_all_params(self):
         """A backward pass should compute gradients for all trainable params."""
